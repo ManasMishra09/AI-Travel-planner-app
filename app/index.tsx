@@ -7,7 +7,10 @@ export default function Index() {
         flex: 1,
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text style={{
+        fontSize:30,
+        fontFamily:'outfit-medium'
+      }}>Welcome!My friend</Text>
     </View>
   );
 }
