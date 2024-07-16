@@ -1,8 +1,11 @@
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Colors } from '@/constants/Colors'
+import { useRouter } from 'expo-router'
 
 export default function Login() {
+
+  const router=useRouter();
   return (
     <View>
         {/* I am fetching the image from the Local */}
@@ -28,13 +31,15 @@ export default function Login() {
             marginTop:20
         }}>Discover your next adventure effortlessely.Personalized itineraries at your fingertips.Travel smarter with AI-driven insights.</Text>
 
-        <View style={styles.button}>
+        <TouchableOpacity style={styles.button}
+            onPress={()=>router.push('auth/sign-in')}
+        >
             <Text style={{color:Colors.WHITE,
                 textAlign:'center',
                 fontFamily:'outfit',
                 fontSize:17
-            }}>Sign In with Google</Text>
-        </View>
+            }}>Get Started</Text>
+        </TouchableOpacity>
       </View>
     </View>
   )
